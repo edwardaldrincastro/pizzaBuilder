@@ -83,7 +83,7 @@ class vegetableToppings extends Component {
 
 
     render() {
-        alert(this.state.veggiesSelected.length !== 0 ? this.state.veggiesSelected.length : "empty")
+        // alert(this.state.veggiesSelected.length !== 0 ? this.state.veggiesSelected.length : "empty")
         return (
             <View>
                 <View style={styles.checkBoxStyle}>

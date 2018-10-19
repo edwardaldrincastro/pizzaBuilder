@@ -10,8 +10,10 @@ class sizePicker extends Component {
 state = {
     language : ""
 }
+
+
     render() {
-        alert(this.state.language)
+        // alert(this.state.language)
         return (
             <View>
                 {/* <Picker
@@ -41,4 +43,5 @@ const styles = StyleSheet.create({
 
 
 })
+
 export default sizePicker;

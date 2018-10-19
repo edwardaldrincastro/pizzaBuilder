@@ -75,7 +75,7 @@ class nonVegetableToppings extends Component {
     }
 
     render() {
-        alert(this.state.nonVeggiesSelected.length !== 0 ? this.state.nonVeggiesSelected.length : "empty")
+        // alert(this.state.nonVeggiesSelected.length !== 0 ? this.state.nonVeggiesSelected.length : "empty")
         return (
             <View>
             <View style={styles.checkBoxStyle}>

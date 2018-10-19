@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {pizzaBuilder} from "./src/components/pizzaBuilder/pizzaBuilder";
-import SizePicker from "./src/components/sizePicker/sizePicker";
+import SizePicker, { sizeState } from "./src/components/sizePicker/sizePicker";
 import VegetableToppings from "./src/components/vegetableToppings/vegetableToppings";
 import NonVegetableToppings from "./src/components/nonVegetableToppings/nonVegetableToppings";
 import Cheese from "./src/components/cheese/cheese";
@@ -23,8 +23,8 @@ export default class App extends Component {
 
   }
   getSizeFromPizzaBuilder = () => pizzaBuilder.size.map(val => {
+    return {
     // <Picker.Item label={val.inches} value={val.value}/>
-      return {
         sizes: {
           key: val.inches,
           value: val.value
@@ -49,8 +49,14 @@ export default class App extends Component {
   });
 };
   */
-
+sizeHandler = (size) => {
+  return this.props.language
+}
+// alert = () => {
+//   alert(sizeState)
+// }
   render() {
+    // {this.alert()}
     return (
       <View style={styles.container}>
 
@@ -67,7 +73,7 @@ export default class App extends Component {
               <Text style={styles.toppings}>
                 Size
               </Text>
-              <SizePicker sizeObject={this.sizes.keys}/>
+              <SizePicker sizeObject={this.sizeHandler}/>
             </View>
 
             <View style={styles.veggies}>
@@ -75,13 +81,6 @@ export default class App extends Component {
                 Vegetable Toppings{}
               </Text>
               <VegetableToppings />
-
-              {/* <CheckBox
-                    value={this.state.checked}
-              {/* <CheckBox
-                    onValueChange={() => this.setState({ checked: !this.state.checked })}
-                  />
-                  <Text style={{marginTop: 5}}> this is checkbox</Text> */}
             </View>
 
             <View style={styles.nonVeggies}>
@@ -110,7 +109,7 @@ export default class App extends Component {
         </Text> */}
       </View>
     );
-
+    
   }
 }
 
@@ -155,3 +154,4 @@ const styles = StyleSheet.create({
   },
 
 });
+  
