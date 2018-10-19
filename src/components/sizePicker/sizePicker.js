@@ -2,12 +2,8 @@ import React, { Component } from 'react';
 import { pizzaBuilder } from "../pizzaBuilder/pizzaBuilder";
 import {
     StyleSheet,
-    Text,
     View,
-    Button,
-    Picker,
-    CheckBox,
-    ScrollView
+    Picker
 } from 'react-native';
 
 class sizePicker extends Component {
@@ -15,6 +11,7 @@ state = {
     language : ""
 }
     render() {
+        alert(this.state.language)
         return (
             <View>
                 {/* <Picker
